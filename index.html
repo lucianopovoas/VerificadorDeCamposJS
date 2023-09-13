@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <form id="formulario">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" />
+        <br />
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" />
+        <br />
+        <button type="button" onclick="verificar()">Verificar</button>
+    </form>
+    <p id="resultado"></p>
+
+    <script>
+        function verificar() {
+            var login = document.getElementById("login").value;
+            var senha = document.getElementById("senha").value;
+
+            if (login === "" || senha === "") {
+                document.getElementById("resultado").textContent = "Os campos não foram preenchidos";
+            } else {
+                document.getElementById("resultado").textContent = "Os campos foram preenchidos";
+            }
+        }
+    </script>
+</body>
+</html>
